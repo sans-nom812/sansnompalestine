@@ -3,50 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soutien à la Palestine</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2054810410701299" crossorigin="anonymous"></script>
+    <title>Accueil - Soutien à la Palestine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-<nav>
-    <a href="index.html">Accueil</a>
-    <a href="don.html">Faire un don</a> <!-- Nouveau lien vers la page des dons -->
-</nav>
-   
- <header>
-        <h1>🇵🇸 Soutenez la Palestine 🇵🇸</h1>
-        <p>Regardez des publicités pour contribuer gratuitement !</p>
+    <header class="header">
+        <h1>Bienvenue sur Soutien à la Palestine</h1>
+        <p>Aidez-nous en faisant un don ou en regardant une publicité.</p>
     </header>
+    <img src="https://storage.googleapis.com/school-network-net/PersonalFiles/25206/5705367/il_1588xN.2006380726_414x-removebg-preview.png" 
+         alt="Logo" class="small-image">
 
-    <section class="hero">
-        <h2>Un clic peut faire la différence</h2>
-        <p>Chaque publicité regardée génère des fonds pour aider la Palestine.</p>
-        <a href="#" class="btn">Soutenir maintenant</a>
-    </section>
+    <div class="main-section">
+        <!-- Bouton "Regarder une pub" (plus grand et au-dessus) -->
+        <button class="btn btn-big btn-red" onclick="ouvrirPub()">Regarder une pub</button>
 
-    <!-- Annonce Google AdSense -->
-    <div class="ads-container">
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-2054810410701299"
-            data-ad-slot="**REMPLACE_CECI_PAR_TON_ID**" <!-- ⚠️ Remplace par ton vrai ID d'annonce -->
-            data-ad-format="auto"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <div class="button-container">
+            <!-- Bouton "Faire un don" -->
+            <a href="don.html" class="btn btn-green">Faire un don</a>
+            <!-- Bouton "Statistiques" -->
+            <a href="statistiques.html" class="btn btn-black">Statistiques</a>
+        </div>
     </div>
 
-    <section class="info">
-        <h2>Comment ça marche ?</h2>
-        <p>1️⃣ Regardez une publicité 📺</p>
-        <p>2️⃣ L'argent généré est reversé aux associations 🇵🇸</p>
-        <p>3️⃣ Vous aidez sans dépenser un centime 💚</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Soutien Palestine - Tous droits réservés</p>
+    <footer class="footer">
+        <p>&copy; 2025 - Soutien à la Palestine. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
