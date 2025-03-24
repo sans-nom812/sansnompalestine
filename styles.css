@@ -1,4 +1,3 @@
-/* 🌟 Style général */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #004d00, #8b0000);
@@ -78,3 +77,4 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
