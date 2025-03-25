@@ -13,74 +13,16 @@
     <!-- Balise Favicon -->
     <link rel="icon" type="image/png" href="https://storage.googleapis.com/school-network-net/PersonalFiles/25206/5705367/il_1588xN.2006380726_414x-removebg-preview.png">
     
+    <!-- Liens vers le fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
+    
     <!-- Métadonnées et paramètres de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Soutien à la Palestine</title>
 
-    <!-- Liens vers les fichiers CSS et JS -->
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-
     <!-- Script Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2054810410701299" crossorigin="anonymous"></script>
-
-    <!-- Style pour positionner les annonces -->
-    <style>
-        /* Placement des publicités Google sur les côtés */
-        .ads-container {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 300px;
-            z-index: 10;
-        }
-
-        .ads-left {
-            left: 0;
-        }
-
-        .ads-right {
-            right: 0;
-        }
-
-        /* Section principale */
-        .main-section {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        /* Cacher la publicité vidéo au début */
-        #videoAdContainer {
-            display: none;
-            margin-top: 20px;
-        }
-
-        /* Boutons */
-        .btn {
-            padding: 15px 30px;
-            font-size: 1.2em;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .btn-red {
-            background-color: red;
-            color: white;
-        }
-
-        .btn-green {
-            background-color: green;
-            color: white;
-        }
-
-        .btn-black {
-            background-color: black;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -121,7 +63,7 @@
         <!-- Bouton "Regarder une pub" (plus grand et au-dessus) -->
         <button class="btn btn-big btn-red" onclick="ouvrirPub()">Regarder une pub</button>
 
-        <!-- Zone pour afficher la publicité vidéo (Exoclic) -->
+        <!-- Zone pour afficher la publicité vidéo (Exoclick) -->
         <div id="videoAdContainer" class="ad-container">
             <!-- Intégrer l'iframe de Exoclic pour la publicité vidéo -->
             <iframe src="https://s.magsrv.com/v1/vast.php?idzone=5569642" width="640" height="360" frameborder="0" allowfullscreen></iframe>
