@@ -227,3 +227,152 @@ canvas {
     color: white;
     padding: 10px 0;
 }
+.hidden {
+    display: none;
+}
+
+.ad-container {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    margin: auto;
+}
+#news-section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#news-section h2 {
+    color: #d9534f;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news-item {
+    width: 30%;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.news-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-item h3 {
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+.news-item h3 a {
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.news-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.news-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Amélioration du tableau */
+#stats-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#stats-section h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #d9534f;
+    color: white;
+}
+
+td {
+    background: #f9f9f9;
+}
+/* Animation pour les actualités */
+.news-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Une fois visible */
+.news-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Effet fluide au survol des boutons */
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Changement de couleur au survol */
+.btn-red:hover {
+    background-color: #ff4444;
+    transform: scale(1.05);
+}
+
+.btn-green:hover {
+    background-color: #28a745;
+    transform: scale(1.05);
+}
+
+.btn-black:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+.ad-container {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.ad-container.show {
+    opacity: 1;
+    transform: scale(1);
+}
