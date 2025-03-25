@@ -60,3 +60,55 @@ document.addEventListener("DOMContentLoaded", () => {
 function ouvrirPub() {
     window.open("https://www.google.com/adsense/start/", "_blank");
 }
+function detecterAdBlock() {
+    let adTest = document.createElement("div");
+    adTest.innerHTML = "&nbsp;";
+    adTest.className = "adsbygoogle";  // Classe ciblée par les bloqueurs de pub
+    adTest.style.position = "absolute";
+    adTest.style.left = "-9999px";
+    document.body.appendChild(adTest);
+
+    setTimeout(() => {
+        if (adTest.offsetHeight === 0) {
+            afficherMessageAdBlock();
+        }
+        document.body.removeChild(adTest);
+    }, 100);
+}
+
+function afficherMessageAdBlock() {
+    let overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.background = "rgba(0, 0, 0, 0.8)";
+    overlay.style.color = "white";
+    overlay.style.display = "flex";
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    overlay.style.textAlign = "center";
+    overlay.style.padding = "20px";
+    overlay.style.zIndex = "10000";
+
+    overlay.innerHTML = `
+        <div>
+            <h2>😢 AdBlock détecté !</h2>
+            <p>Merci de désactiver AdBlock pour soutenir notre cause.</p>
+            <button onclick="fermerMessageAdBlock()" style="padding: 10px; background: red; color: white; border: none; cursor: pointer;">
+                J'ai désactivé AdBlock
+            </button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+}
+
+function fermerMessageAdBlock() {
+    document.body.removeChild(document.body.lastChild);
+}
+
+// Lancer la détection au chargement de la page
+window.onload = detecterAdBlock;
+s
