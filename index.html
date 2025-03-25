@@ -62,11 +62,11 @@
     <div class="main-section">
         <!-- Bouton "Regarder une pub" (centré) -->
         <button class="btn btn-big btn-red" onclick="ouvrirPub()">Regarder une pub</button>
+<!-- Zone pour afficher la publicité (initialement cachée) -->
+<div id="videoAdContainer" class="ad-container hidden">
+    <iframe src="https://s.magsrv.com/v1/vast.php?idzone=5569642" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+</div>
 
-        <!-- Zone pour afficher la publicité vidéo -->
-        <div id="videoAdContainer" class="ad-container">
-            <iframe src="https://s.magsrv.com/v1/vast.php?idzone=5569642" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-        </div>
 
         <div class="button-container">
             <!-- Bouton "Faire un don" -->
