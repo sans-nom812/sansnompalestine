@@ -60,12 +60,11 @@
     </div>
 
     <div class="main-section">
-        <!-- Bouton "Regarder une pub" (plus grand et au-dessus) -->
+        <!-- Bouton "Regarder une pub" (centré) -->
         <button class="btn btn-big btn-red" onclick="ouvrirPub()">Regarder une pub</button>
 
-        <!-- Zone pour afficher la publicité vidéo (Exoclick) -->
+        <!-- Zone pour afficher la publicité vidéo -->
         <div id="videoAdContainer" class="ad-container">
-            <!-- Intégrer l'iframe de Exoclic pour la publicité vidéo -->
             <iframe src="https://s.magsrv.com/v1/vast.php?idzone=5569642" width="640" height="360" frameborder="0" allowfullscreen></iframe>
         </div>
 
@@ -81,12 +80,6 @@
         <p>© 2025 - Soutien à la Palestine. Tous droits réservés.</p>
     </footer>
 
-    <script>
-        // Fonction pour afficher la publicité vidéo lorsque l'on clique sur le bouton
-        function ouvrirPub() {
-            // Afficher la publicité vidéo
-            document.getElementById('videoAdContainer').style.display = 'block';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
