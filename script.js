@@ -135,4 +135,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lancer la détection AdBlock après le chargement complet
     setTimeout(detecterAdBlock, 500);
 });
+function ouvrirPub() {
+    let adContainer = document.getElementById("videoAdContainer");
+    if (adContainer.classList.contains("show")) {
+        adContainer.classList.remove("show");
+        setTimeout(() => adContainer.classList.add("hidden"), 400); // Attends l'animation avant de cacher
+    } else {
+        adContainer.classList.remove("hidden");
+        setTimeout(() => adContainer.classList.add("show"), 10); // Délai pour lancer l'animation
+    }
+}
+// Détecter si les actualités sont visibles pour déclencher l'animation
+document.addEventListener("DOMContentLoaded", () => {
+    const newsItems = document.querySelectorAll(".news-item");
+
+    function checkVisibility() {
+        newsItems.forEach((item) => {
+            if (item.getBoundingClientRect().top < window.innerHeight - 50) {
+                item.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility();
+});
 
