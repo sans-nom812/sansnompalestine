@@ -123,7 +123,8 @@
 
         <!-- Zone pour afficher la publicité vidéo (Exoclic) -->
         <div id="videoAdContainer" class="ad-container">
-            <script async src="https://s.magsrv.com/v1/vast.php?idzone=5569642"></script>
+            <!-- Intégrer l'iframe de Exoclic pour la publicité vidéo -->
+            <iframe src="https://s.magsrv.com/v1/vast.php?idzone=5569642" width="640" height="360" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="button-container">
@@ -141,6 +142,7 @@
     <script>
         // Fonction pour afficher la publicité vidéo lorsque l'on clique sur le bouton
         function ouvrirPub() {
+            // Afficher la publicité vidéo
             document.getElementById('videoAdContainer').style.display = 'block';
         }
     </script>
