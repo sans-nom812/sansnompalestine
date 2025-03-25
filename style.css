@@ -157,3 +157,73 @@ canvas {
     display: none;
     margin-top: 20px;
 }
+/* Placement des publicités Google sur les côtés */
+.ads-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    z-index: 10;
+}
+
+.ads-left {
+    left: 0;
+}
+
+.ads-right {
+    right: 0;
+}
+
+/* Section principale */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Cacher la publicité vidéo au début */
+#videoAdContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Boutons */
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+}
+
+.btn-green {
+    background-color: green;
+    color: white;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
+
+/* Footer caché au départ et visible uniquement en bas */
+.footer {
+    display: none;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+}
