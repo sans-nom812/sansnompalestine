@@ -211,4 +211,57 @@ footer {
     width: 100%;
     bottom: 0;
 }
-s
+/* Placement des publicités Google sur les côtés */
+.ads-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    z-index: 10;
+}
+
+.ads-left {
+    left: 0;
+}
+
+.ads-right {
+    right: 0;
+}
+
+/* Section principale */
+.main-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Cacher la publicité vidéo au début */
+#videoAdContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Boutons */
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+}
+
+.btn-green {
+    background-color: green;
+    color: white;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
+
