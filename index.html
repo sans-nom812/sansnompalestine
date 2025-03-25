@@ -24,41 +24,107 @@
 
     <!-- Script Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2054810410701299" crossorigin="anonymous"></script>
+
+    <!-- Style pour positionner les annonces -->
+    <style>
+        /* Placement des publicités Google sur les côtés */
+        .ads-container {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            z-index: 10;
+        }
+
+        .ads-left {
+            left: 0;
+        }
+
+        .ads-right {
+            right: 0;
+        }
+
+        /* Section principale */
+        .main-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Cacher la publicité vidéo au début */
+        #videoAdContainer {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* Boutons */
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-red {
+            background-color: red;
+            color: white;
+        }
+
+        .btn-green {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-black {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <header class="header">
         <h1>Bienvenue sur Soutien à la Palestine</h1>
         <p>Aidez-nous en faisant un don ou en regardant une publicité.</p>
-
-<!-- Annonce Google AdSense sous le titre -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2054810410701299"
-     data-ad-slot="7954736971"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
     </header>
+
     <img src="https://storage.googleapis.com/school-network-net/PersonalFiles/25206/5705367/il_1588xN.2006380726_414x-removebg-preview.png" 
          alt="Logo" class="small-image">
+
+    <!-- Placement des publicités Google sur le côté gauche et droit -->
+    <div class="ads-container ads-left">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2054810410701299"
+             data-ad-slot="7954736971"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="ads-container ads-right">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2054810410701299"
+             data-ad-slot="7954736971"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <div class="main-section">
         <!-- Bouton "Regarder une pub" (plus grand et au-dessus) -->
         <button class="btn btn-big btn-red" onclick="ouvrirPub()">Regarder une pub</button>
-           <!-- Annonce Google AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2054810410701299"
-     data-ad-slot="7954736971"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
+        <!-- Zone pour afficher la publicité vidéo (Exoclic) -->
+        <div id="videoAdContainer" class="ad-container">
+            <script async src="https://s.magsrv.com/v1/vast.php?idzone=5569642"></script>
+        </div>
 
         <div class="button-container">
             <!-- Bouton "Faire un don" -->
@@ -71,5 +137,12 @@
     <footer class="footer">
         <p>&copy; 2025 - Soutien à la Palestine. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        // Fonction pour afficher la publicité vidéo lorsque l'on clique sur le bouton
+        function ouvrirPub() {
+            document.getElementById('videoAdContainer').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
