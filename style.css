@@ -265,3 +265,43 @@ footer {
     color: white;
 }
 
+/* Centrer le bouton au milieu de la page */
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    text-align: center;
+}
+
+/* Cacher la publicité vidéo au début */
+#videoAdContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Boutons */
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+}
+
+.btn-green {
+    background-color: green;
+    color: white;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
