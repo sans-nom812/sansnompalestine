@@ -112,3 +112,8 @@ function fermerMessageAdBlock() {
 // Lancer la détection au chargement de la page
 window.onload = detecterAdBlock;
 s
+function ouvrirPub() {
+    var pubExoclick = document.createElement('script');
+    pubExoclick.src = "https://s.magsrv.com/v1/vast.php?idzone=5569642";  // URL de ta publicité Exoclick
+    document.body.appendChild(pubExoclick);
+}
